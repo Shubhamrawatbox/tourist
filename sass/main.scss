@@ -1,0 +1,200 @@
+@import "./color";
+@import "./mainsection";
+@import "./service";
+@import "./info";
+@import "./know";
+
+
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: $first;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+a {
+
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.main-header {
+  width: 100%;
+  height: 100vh;
+  background:linear-gradient(to right,rgba(0,0,0,0.6),rgba(0,0,0,0.4)),
+  url("../images/bg.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: $first;
+
+  & .navbar {
+    width: 100%;
+    background:transparent;
+    position: fixed;
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 4fr 1fr 1fr;
+    align-items: center;
+    z-index: 999;
+    padding: 0 0.5rem;
+    &__logo {
+      width: 100%;
+      height: 100px;
+      grid-column: 1/3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 50px;
+      }
+      &__para {
+        margin-left: 0.5rem;
+        font-size: 2rem;
+        font-weight: 700;
+        font-family: "Oswald", sans-serif;
+      }
+      @include mobile2{
+        grid-column: 1/2;
+      }
+    }
+    & .navbar__list {
+      grid-column: 3/4;
+      display: flex;
+      justify-content: flex-end;
+      &__menu {
+        margin-left: 2rem;
+        position: relative;
+        & .list-item {
+          color: $first;
+          font-size: 1.1rem;
+          @include fontweight;
+
+          &:hover {
+            color: $hover;
+          }
+          @include mobile{
+            font-size: 0.8rem;
+          }
+        }
+        & .active {
+          color: $hover;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          width: 0%;
+          height: 3px;
+          background-color: $second;
+          display: block;
+          left: 0;
+          bottom: -10px;
+        }
+        &:hover::after {
+          width: 100%;
+          @include transition;
+        }
+      }
+      @include mobile{
+        grid-column: 3/5;
+      }
+      @include mobile2{
+        display: none;
+      }
+    }
+    & .social-icons {
+      display: flex;
+      justify-content: center;
+      &__icon {
+        background: $second;
+        cursor: pointer;
+        padding: 0.6rem 1rem;
+        @include clippath;
+        margin-left: 1rem;
+        &:hover{
+          background: $first;
+          color: $second;
+        }
+      }
+      @include mobile{
+        display: none;
+      }
+
+    }
+    & #moon{
+      display: flex;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.4rem;
+      align-items: center;
+    }
+    @include mobile2{
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  & .header-content {
+    position: absolute;
+    margin: 15rem;
+    text-align: center;
+
+    & .title {
+      font-size: 4rem;
+      animation: animate 4s infinite;
+      @include fontweight;
+      margin-bottom: 0.8rem;
+      &::after {
+        content: "";
+        animation: animate infinite 8s;
+      }
+      @include mobile3{
+        font-size: 2.5rem;
+        margin-top: 7rem;
+      }
+    }
+    & .para {
+      width: 65%;
+      font-weight: 700;
+      margin: 2rem auto;
+    }
+    & .btn {
+      background: $btn;
+      padding: 0.7rem 1.4rem;
+      @include fontweight;
+      color: $first;
+      &:hover {
+        background: transparent;
+        border: 2px solid $btn;
+        @include transition;
+      }
+    }
+    @include mobile{
+      margin: 8rem;
+    }
+    @include mobile3{
+      margin: 3rem 0;
+    }
+  }
+}
+@keyframes animate {
+  0% {
+    content: "Template";
+  }
+  40% {
+    content: "Service";
+  }
+  80% {
+    content: "contact";
+  }
+  100% {
+    content: "solution";
+  }
+}
+

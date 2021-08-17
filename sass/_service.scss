@@ -1,0 +1,101 @@
+.service {
+  background-color: $light-color;
+  padding: 4rem 1.5rem;
+  text-align: center;
+  &__span {
+    color: $second;
+  }
+  & .service-title {
+    font-size: 2rem;
+    text-transform: capitalize;
+  }
+  & .cards {
+    margin: 2.5rem 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    & .card {
+      max-width: 90%;
+      position: relative;
+      border-radius: 10px;
+      border: 1px solid rgba($color: #000000, $alpha: 0.4);
+      background: $first;
+      & .card-img {
+        margin: 0;
+        height: 200px;
+        & img {
+          border-radius: 10px 10px 0px 0px;
+          width: 100%;
+          height: 100%;
+          filter: grayscale(50%);
+        }
+        @include mobile{
+          max-height: 450px;
+        }
+      }
+      & .card-content {
+        padding: 2.5rem 2rem;
+
+        &__titles {
+          padding: 0.7rem 0;
+          text-transform: capitalize;
+        }
+        & .detail {
+          margin-top: 1.5rem;
+          & .media {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            & .media-para {
+              margin-left: 1rem;
+            }
+            & .fas {
+              color: $second;
+            }
+          }
+        }
+        & .price {
+          margin: 0;
+          padding: 1.5rem 0;
+          font-size: 1.4rem;
+          font-weight: 900;
+          &__item {
+            color: $second;
+          }
+        }
+        & .detail-btn {
+          position: absolute;
+          bottom: -20px;
+          outline: none;
+          border: none;
+          background: $btn;
+          padding: 0.7rem 2rem;
+          cursor: pointer;
+          text-transform: capitalize;
+          font-weight: 600;
+          left: 50%;
+          transform: translateX(-50%);
+          &:hover{
+              border:1px solid $btn;
+              background: transparent;
+          }
+        }
+      }
+      @include mobile{
+        margin: auto;
+        max-width: 80%;
+        margin-top: 1.4rem;
+
+      }
+      @include mobile2{
+        max-width: 100%;
+      }
+    }
+    @include mobile{
+      grid-template-columns: 1fr;
+    }
+  }
+  @include mobile2{
+    background-color: $first;
+  }
+}
