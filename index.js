@@ -37,11 +37,10 @@ for (let i = 0; i < ques.length; i++) {
 // toggle background
 const one = document.getElementById("moon");
 const change = () => {
-
   if (one.classList.contains("fa-moon")) {
     one.classList.add("fa-star");
     one.classList.remove("fa-moon");
-    document.body.classList.toggle('dark-theme')
+    document.body.classList.toggle("dark-theme");
   } else {
     one.classList.add("fa-moon");
     one.classList.remove("fa-star");
@@ -49,3 +48,12 @@ const change = () => {
 };
 
 one.addEventListener("click", change);
+
+// menu hamburger animated
+const menu = document.querySelector(".menu");
+const mobilemenu = document.getElementById("mobilemenu");
+
+menu.addEventListener("click", function () {
+  menu.classList.toggle('active');
+  mobilemenu.classList.toggle('menuactive');
+});
