@@ -17,7 +17,9 @@
   </head>
   <body>
     <!-- header -->
+
     <header class="main-header">
+
       <nav class="navbar" id="navbar">
         <div class="navbar__logo">
           <img src="./images/logo.jpg" alt="" />
@@ -34,10 +36,10 @@
             <a href="#services" class="list-item">service</a>
           </li>
           <li class="navbar__list__menu">
-            <a href="" class="list-item">call me</a>
+            <a href="#know" class="list-item">call me</a>
           </li>
           <li class="navbar__list__menu">
-            <a href="" class="list-item">about</a>
+            <a href="#project" class="list-item">about</a>
           </li>
           <li class="navbar__list__menu">
             <a href="" class="list-item">contact</a>
@@ -230,7 +232,7 @@
       </div>
     </section>
     <!-- know more -->
-    <section class="know-more">
+    <section class="know-more" id="know">
       <div class="konw-conatiner">
         <div class="konw-conatiner__left">
           <div class="left-img">
@@ -281,9 +283,55 @@
     </section>
 
     <!-- project -->
-    <section class="project">
-      <span class="project-span"></span>
+    <section class="project" id="project">
+      <span class="project-span">Projects</span>
+      <h2 class="project-title">Project that We're Proud Of</h2>
+      <ul class="product-info">
+        <li class="product-list active" data-filter="all">Show All</li>
+        <li class="product-list" data-filter="design">Design</li>
+        <li class="product-list" data-filter="development">Development</li>
+        <li class="product-list" data-filter="marketing">Marketing</li>
+        <li class="product-list" data-filter="Seo">Seo</li>
+      </ul>
+
+        <div class="product">
+          <div class="item-box" data-item="development">
+            <img src="./images/work1.jpg" alt="" srcset="">
+            <h5 class="hover-title">Online Banking</h5>
+          </div>
+          <div class="item-box" data-item="design">
+            <img src="./images/work2.jpg" alt="" srcset="">
+            <h5 class="hover-title">Online Banking</h5>
+          </div>
+          <div class="item-box" data-item="Seo">
+            <img src="./images/work3.jpg" alt="" srcset="">
+            <h5 class="hover-title">Online Banking</h5>
+          </div>
+          <div class="item-box" data-item="development">
+            <img src="./images/work2.jpg" alt="" srcset="">
+            <h5 class="hover-title">Online Banking</h5>
+          </div>
+          <div class="item-box" data-item="marketing">
+            <img src="./images/work4.jpg" alt="" srcset="">
+            <h5 class="hover-title">Online Banking</h5>
+          </div>
+          <div class="item-box" data-item="development">
+            <img src="./images/work5.jpg" alt="" srcset="">
+            <h5 class="hover-title">Online Banking</h5>
+          </div>
+          <div class="item-box" data-item="Seo">
+            <img src="./images/work6.jpg" alt="" srcset="">
+            <h5 class="hover-title">Online Banking</h5>
+          </div>
+          <div class="item-box" data-item="design">
+            <img src="./images/work7.jpg" alt="" srcset="">
+            <h5 class="hover-title">Online Banking</h5>
+          </div>
+        </div>
     </section>
+    <div class="top-btn" id="top">
+      <i class="fas fa-arrow-up"></i>
+    </div>
     <script src="./index.js"></script>
   </body>
 </html>
