@@ -54,6 +54,69 @@ const menu = document.querySelector(".menu");
 const mobilemenu = document.getElementById("mobilemenu");
 
 menu.addEventListener("click", function () {
-  menu.classList.toggle('active');
-  mobilemenu.classList.toggle('menuactive');
+  menu.classList.toggle("active");
+  mobilemenu.classList.toggle("menuactive");
+});
+
+// chnage active class in menu list
+
+let navbarmenu = document.querySelectorAll(".list-item");
+
+for (let i = 0; i < navbarmenu.length; i++) {
+  const element = navbarmenu[i];
+  element.addEventListener("click", function () {
+    console.log(element);
+    for (let j = 0; j < navbarmenu.length; j++) {
+      const element2 = navbarmenu[j];
+      element2.classList.remove("active");
+    }
+    this.classList.add("active");
+    console.log(this);
+  });
+}
+
+//work project js
+
+let productlist = document.querySelectorAll(".product-list");
+let itembox = document.querySelectorAll(".item-box");
+
+for (let l = 0; l < productlist.length; l++) {
+  const element = productlist[l];
+  element.addEventListener("click", function () {
+    for (let j = 0; j < productlist.length; j++) {
+      const ele = productlist[j];
+      ele.classList.remove("active");
+    }
+    this.classList.add("active");
+    let datafilter = this.getAttribute("data-filter");
+    console.log(datafilter);
+    for (let k = 0; k < itembox.length; k++) {
+      const element3 = itembox[k];
+      console.log(element);
+      console.log(itembox.length);
+      element3.classList.add("hide");
+      if (
+        element3.getAttribute("data-item") == datafilter ||
+        datafilter == "all"
+      ) {
+        element3.classList.remove("hide");
+        element3.classList.add("active");
+      }
+    }
+  });
+}
+
+// top btn js
+let topbtn = document.getElementById("top");
+window.addEventListener("scroll", function () {
+  let yx = window.scrollY;
+  if (yx > 80) {
+    topbtn.style.display = "block";
+  } else {
+    topbtn.style.display = "none";
+  }
+});
+topbtn.addEventListener("click", function () {
+  console.log("hlllll");
+  window.scrollTo(0, 0);
 });

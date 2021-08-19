@@ -30,7 +30,7 @@
           filter: grayscale(50%);
         }
         @include mobile{
-          max-height: 450px;
+          height: 450px;
         }
       }
       & .card-content {

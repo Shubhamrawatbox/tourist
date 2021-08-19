@@ -92,7 +92,7 @@ html {
 }
 @media (max-width: 990px) {
   .service .cards .card .card-img {
-    max-height: 450px;
+    height: 450px;
   }
 }
 .service .cards .card .card-content {
@@ -289,6 +289,118 @@ html {
   .know-more .konw-conatiner {
     grid-template-columns: 1fr;
   }
+}
+
+.project {
+  padding: 2rem 1.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 40px auto;
+  font-size: 1.2rem;
+}
+.project .project-span {
+  color: #22a6b3;
+}
+.project .project-title {
+  margin: 1.2rem 0;
+}
+.project .product-info {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+.project .product-info .product-list {
+  list-style: none;
+  background: #eee;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  margin: 0.5rem;
+  transition: all 0.5s;
+  font-size: 0.8rem;
+}
+.project .product-info .product-list.active {
+  background: #03a9f4;
+  color: #fff;
+}
+.project .product-info .product-list:hover {
+  background: #03a9f4;
+}
+.project .product {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 1rem 1.5rem;
+}
+.project .product .item-box {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: block;
+  cursor: pointer;
+  overflow: hidden;
+}
+.project .product .item-box .hover-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  color: #fff;
+  font-size: 1.3rem;
+  transition: all 0.5s;
+}
+.project .product .item-box img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+}
+.project .product .item-box:hover .hover-title {
+  opacity: 1;
+}
+.project .product .item-box:hover img {
+  transform: scale(1.3);
+  filter: grayscale(0.5);
+}
+@media (max-width: 990px) {
+  .project .product .item-box {
+    width: 150px;
+    height: 150px;
+  }
+}
+.project .product .item-box.active {
+  display: block;
+}
+.project .product .item-box.hide {
+  display: none;
+}
+@media (max-width: 990px) {
+  .project .product {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 660px) {
+  .project .product {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  font-size: 1.2rem;
+  background: #00d2d3;
+  padding: 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.top-btn:hover {
+  background: #7ed6df;
 }
 
 * {
