@@ -7,6 +7,7 @@
 @import "./topbtn";
 @import "./team";
 @import "./about";
+@import "./footer";
 
 @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap");
@@ -88,7 +89,7 @@ li {
       display: flex;
       justify-content: flex-end;
       &__menu {
-        margin-left: 2rem;
+        margin-left: 1.5rem;
         position: relative;
         & .list-item {
           color: $first;
@@ -121,6 +122,9 @@ li {
         }
         @include mobile2 {
           margin-top: 1.2rem;
+        }
+        @include mobile{
+          margin-left: 1rem;
         }
       }
       @include mobile {

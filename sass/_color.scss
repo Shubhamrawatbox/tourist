@@ -23,6 +23,10 @@ $mobile4:1300px;
 @mixin clippath {
   clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
 }
+@mixin footer-title {
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+}
 html{
   scroll-behavior: smooth;
 }

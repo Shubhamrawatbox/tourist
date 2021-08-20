@@ -123,25 +123,21 @@ topbtn.addEventListener("click", function () {
 
 // counter animated in js
 
-let user = document.querySelectorAll(".target");
-let count = 0;
-window.addEventListener("scroll", function () {
-  let yy = window.scrollY;
-  
-  if (yy > 4000) {
-    for (let u = 0; u < user.length; u++) {
-      const elementu = user[u];
-      let datatarget = elementu.getAttribute("data-target");
-      setInterval(() => {
-        if (count < datatarget) {
-          elementu.innerHTML = count;
-          count++;
-        } else {
-          elementu.innerHTML = datatarget;
-        }
-      }, 400);
+const counters = document.querySelectorAll(".target");
+
+counters.forEach((counter) => {
+  counter.innerHTML = 0;
+  const updateCounter = () => {
+    const targetcount = Number(counter.getAttribute("data-target"));
+    const startingcount = Number(counter.innerHTML);
+    const incr = targetcount / 5;
+
+    if (startingcount < targetcount) {
+      counter.innerHTML = `${startingcount + incr}`;
+      setTimeout(updateCounter, 1000);
+    } else {
+      counter.innerHTML = targetcount;
     }
-  } else {
-    count = 0;
-  }
+  };
+  updateCounter();
 });
