@@ -1,0 +1,64 @@
+.about {
+  padding: 3rem 1.5rem;
+  & .about-container {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    & .about-left {
+      min-width: 300px;
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    & .about-right {
+      margin-left: 3rem;
+      margin-top: 1.5rem;
+      &_content {
+        & .about-title {
+          color: $second;
+          font-size: 1.2rem;
+          font-weight: bold;
+        }
+        & .about-heading {
+          font-size: 2rem;
+        }
+        & .about-para {
+          padding: 2rem 0;
+          width: 80%;
+        }
+        & .about-li {
+          list-style: square;
+          color: $second;
+        }
+      }
+      & .animated-client {
+        margin: 1.6rem 0;
+        display: flex;
+        align-items: center;
+        & .target {
+          font-size: 4rem;
+          color: $second;
+          margin-right: 1rem;
+          @include mobile3{
+            font-size: 2rem;
+          }
+        }
+        & .user-title {
+            line-height: 20px;
+            font-size:1.1rem;
+        }
+        @include mobile3{
+          width: 100%;
+          display: block;
+    
+        }
+
+      }
+    }
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+}

@@ -8,17 +8,10 @@ $light-color:#ecf0f1;
 $mobile:990px;
 $mobile2:660px;
 $mobile3:460px;
+$mobile4:1300px;
 
-// .dark-theme{
-//   $first :#000;
-//   $first: #000;
-// $navbar-color: #000;
-// $second: #000;
-// $hover: #000;
-// $third: #000;
-// $btn: #000;
-// $light-color:#000;
-// }
+
+
 
 @mixin transition {
   transition: all 0.5s ease-in-out;
@@ -46,6 +39,11 @@ html{
 }
 @mixin mobile3 {
   @media (max-width:$mobile3) {
+    @content;
+  }
+}
+@mixin mobile4 {
+  @media (max-width:$mobile4) {
     @content;
   }
 }

@@ -1,8 +1,9 @@
 let navbar = document.getElementById("navbar");
 
+// chnage background in scroll
 window.onscroll = () => {
   let top = window.scrollY;
-  // console.log(top);
+
   if (top > 80) {
     navbar.style.background = "#192a56";
     navbar.style.boxShadow = "1px 1px 2px 4px rgba(0,0,0,0.5)";
@@ -40,10 +41,11 @@ const change = () => {
   if (one.classList.contains("fa-moon")) {
     one.classList.add("fa-star");
     one.classList.remove("fa-moon");
-    document.body.classList.toggle("dark-theme");
+    document.body.classList.add("dark-theme");
   } else {
     one.classList.add("fa-moon");
     one.classList.remove("fa-star");
+    document.body.classList.remove("dark-theme");
   }
 };
 
@@ -65,13 +67,11 @@ let navbarmenu = document.querySelectorAll(".list-item");
 for (let i = 0; i < navbarmenu.length; i++) {
   const element = navbarmenu[i];
   element.addEventListener("click", function () {
-    console.log(element);
     for (let j = 0; j < navbarmenu.length; j++) {
       const element2 = navbarmenu[j];
       element2.classList.remove("active");
     }
     this.classList.add("active");
-    console.log(this);
   });
 }
 
@@ -108,15 +108,40 @@ for (let l = 0; l < productlist.length; l++) {
 
 // top btn js
 let topbtn = document.getElementById("top");
+topbtn.style.display = "none";
 window.addEventListener("scroll", function () {
   let yx = window.scrollY;
-  if (yx > 80) {
+  if (yx > 450) {
     topbtn.style.display = "block";
   } else {
     topbtn.style.display = "none";
   }
 });
 topbtn.addEventListener("click", function () {
-  console.log("hlllll");
   window.scrollTo(0, 0);
+});
+
+// counter animated in js
+
+let user = document.querySelectorAll(".target");
+let count = 0;
+window.addEventListener("scroll", function () {
+  let yy = window.scrollY;
+  
+  if (yy > 4000) {
+    for (let u = 0; u < user.length; u++) {
+      const elementu = user[u];
+      let datatarget = elementu.getAttribute("data-target");
+      setInterval(() => {
+        if (count < datatarget) {
+          elementu.innerHTML = count;
+          count++;
+        } else {
+          elementu.innerHTML = datatarget;
+        }
+      }, 400);
+    }
+  } else {
+    count = 0;
+  }
 });
