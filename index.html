@@ -19,7 +19,6 @@
     <!-- header -->
 
     <header class="main-header">
-
       <nav class="navbar" id="navbar">
         <div class="navbar__logo">
           <img src="./images/logo.jpg" alt="" />
@@ -33,16 +32,22 @@
             <a href="#intro" class="list-item">Intro</a>
           </li>
           <li class="navbar__list__menu">
+            <a href="#info" class="list-item">Info</a>
+          </li>
+          <li class="navbar__list__menu">
             <a href="#services" class="list-item">service</a>
           </li>
           <li class="navbar__list__menu">
-            <a href="#know" class="list-item">call me</a>
+            <a href="#about" class="list-item">about</a>
           </li>
           <li class="navbar__list__menu">
-            <a href="#project" class="list-item">about</a>
+            <a href="#know" class="list-item">contact</a>
           </li>
           <li class="navbar__list__menu">
-            <a href="" class="list-item">contact</a>
+            <a href="#project" class="list-item">project</a>
+          </li>
+          <li class="navbar__list__menu">
+            <a href="#team" class="list-item">team</a>
           </li>
         </ul>
         <div class="social-icons">
@@ -55,9 +60,9 @@
         </div>
         <i class="fa fa-moon" id="moon"></i>
         <div class="menu">
-          <span class='line1'></span>
-          <span class='line2'></span>
-          <span class='line3'></span>
+          <span class="line1"></span>
+          <span class="line2"></span>
+          <span class="line3"></span>
         </div>
       </nav>
       <section class="header-content" id="home">
@@ -100,7 +105,7 @@
     </section>
 
     <!-- info section about -->
-    <section class="about">
+    <section class="info" id="info">
       <div class="boxes">
         <div class="box">
           <div class="about-head">
@@ -219,7 +224,7 @@
                 </div>
                 <div class="media">
                   <i class="fas fa-square"></i>
-                  <p class="media-para">Maintaining the leader status</p>
+                  <p class="media-para">Maintaining the leader status we</p>
                 </div>
               </li>
             </ul>
@@ -227,6 +232,43 @@
               Starting at <span class="price__item">$199</span>
             </h5>
             <button class="detail-btn">details</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- about section -->
+    <section class="about" id="about">
+      <div class="about-container">
+        <div class="about-left">
+          <img src="./images/aboutimg.jpg" alt="not-found" srcset="" />
+        </div>
+        <div class="about-right">
+          <div class="about-right_content">
+            <span class="about-title">About</span>
+            <h1 class="about-heading">
+              We're Passionate About Delivering Growth Services
+            </h1>
+            <p class="about-para">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis
+              quam ipsum, quaerat sit voluptatum magni ab fuga sapiente beatae
+              recusandae, inventore suscipit corrupti fugit distinctio?
+            </p>
+            <ul>
+              <li class="about-li">
+                Everything we recommend has direct positive impact
+              </li>
+              <li class="about-li">
+                Everything we recommend has direct positive impact
+              </li>
+            </ul>
+            <div class="animated-client">
+              <span class="target" data-target="350"></span>
+              <h5 class="user-title">Happy<br />Users</h5>
+              <span class="target" data-target="250"></span>
+              <h5 class="user-title">Solved<br />Issues</h5>
+              <span class="target" data-target="180"></span>
+              <h5 class="user-title">Happy<br />Clients</h5>
+            </div>
           </div>
         </div>
       </div>
@@ -294,41 +336,126 @@
         <li class="product-list" data-filter="Seo">Seo</li>
       </ul>
 
-        <div class="product">
-          <div class="item-box" data-item="development">
-            <img src="./images/work1.jpg" alt="" srcset="">
-            <h5 class="hover-title">Online Banking</h5>
-          </div>
-          <div class="item-box" data-item="design">
-            <img src="./images/work2.jpg" alt="" srcset="">
-            <h5 class="hover-title">Online Banking</h5>
-          </div>
-          <div class="item-box" data-item="Seo">
-            <img src="./images/work3.jpg" alt="" srcset="">
-            <h5 class="hover-title">Online Banking</h5>
-          </div>
-          <div class="item-box" data-item="development">
-            <img src="./images/work2.jpg" alt="" srcset="">
-            <h5 class="hover-title">Online Banking</h5>
-          </div>
-          <div class="item-box" data-item="marketing">
-            <img src="./images/work4.jpg" alt="" srcset="">
-            <h5 class="hover-title">Online Banking</h5>
-          </div>
-          <div class="item-box" data-item="development">
-            <img src="./images/work5.jpg" alt="" srcset="">
-            <h5 class="hover-title">Online Banking</h5>
-          </div>
-          <div class="item-box" data-item="Seo">
-            <img src="./images/work6.jpg" alt="" srcset="">
-            <h5 class="hover-title">Online Banking</h5>
-          </div>
-          <div class="item-box" data-item="design">
-            <img src="./images/work7.jpg" alt="" srcset="">
-            <h5 class="hover-title">Online Banking</h5>
-          </div>
+      <div class="product">
+        <div class="item-box" data-item="development">
+          <img src="./images/work1.jpg" alt="" srcset="" />
+          <h5 class="hover-title">Online Banking</h5>
         </div>
+        <div class="item-box" data-item="design">
+          <img src="./images/work2.jpg" alt="" srcset="" />
+          <h5 class="hover-title">Online Banking</h5>
+        </div>
+        <div class="item-box" data-item="Seo">
+          <img src="./images/work3.jpg" alt="" srcset="" />
+          <h5 class="hover-title">Online Banking</h5>
+        </div>
+        <div class="item-box" data-item="development">
+          <img src="./images/work2.jpg" alt="" srcset="" />
+          <h5 class="hover-title">Online Banking</h5>
+        </div>
+        <div class="item-box" data-item="marketing">
+          <img src="./images/work4.jpg" alt="" srcset="" />
+          <h5 class="hover-title">Online Banking</h5>
+        </div>
+        <div class="item-box" data-item="development">
+          <img src="./images/work5.jpg" alt="" srcset="" />
+          <h5 class="hover-title">Online Banking</h5>
+        </div>
+        <div class="item-box" data-item="Seo">
+          <img src="./images/work6.jpg" alt="" srcset="" />
+          <h5 class="hover-title">Online Banking</h5>
+        </div>
+        <div class="item-box" data-item="design">
+          <img src="./images/work7.jpg" alt="" srcset="" />
+          <h5 class="hover-title">Online Banking</h5>
+        </div>
+      </div>
     </section>
+    <!-- team section -->
+    <section class="team" id="team">
+      <h1 class="team-title">Our Team Of Consultants</h1>
+      <p class="team-para">
+        We're only as strong and as knowledgeable as our team. So here are the
+        men and women which help customers meet goals and grow companies
+      </p>
+      <div class="team-container">
+        <div class="single">
+          <div class="singl-img">
+            <img src="./images/team1.jpg" alt="not-found" srcset="" />
+          </div>
+          <h5 class="team-name">John Whitelong</h5>
+          <h6 class="team-post">General Manager</h6>
+        </div>
+        <div class="single">
+          <div class="singl-img">
+            <img src="./images/team2.jpg" alt="not-found" srcset="" />
+          </div>
+          <h5 class="team-name">John White</h5>
+          <h6 class="team-post">Manager</h6>
+        </div>
+        <div class="single">
+          <div class="singl-img">
+            <img src="./images/team4.jpg" alt="not-found" srcset="" />
+          </div>
+          <h5 class="team-name">Chris Zimerman</h5>
+          <h6 class="team-post">Online Marketer</h6>
+        </div>
+        <div class="single">
+          <div class="singl-img">
+            <img src="./images/team5.jpg" alt="not-found" srcset="" />
+          </div>
+          <h5 class="team-name">Veronique Smith</h5>
+          <h6 class="team-post">Senior Manager</h6>
+        </div>
+      </div>
+    </section>
+    <!-- footer -->
+    <footer class="footer-last">
+      <div class="footer-container">
+        <div class="footer-boxes">
+          <h3 class="footer-title">Few Words About Bijou-Tourism</h3>
+          <p class="footer-para">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
+            ipsa ea aliquam, atque tenetur pariatur corrupti eveniet? Provident
+            sint adipisci reprehenderit harum similique recusandae labore.
+          </p>
+        </div>
+        <div class="footer-box">
+          <h4 class="footer-title">Links</h4>
+          <li>
+            <a href="" class="terms-links">Terms & Conditions</a>
+          </li>
+          <li>
+            <a href="" class="terms-links">Privacy & Policy</a>
+          </li>
+        </div>
+        <div class="footer-box">
+          <h4 class="footer-title">Links</h4>
+          <li>
+            <a href="" class="terms-links">businessgrowth.com</a>
+          </li>
+          <li>
+            <a href="" class="terms-links">influence.com</a>
+          </li>
+          <li>
+            <a href="" class="terms-links">optimize.com</a>
+          </li>
+        </div>
+        <div class="footer-box">
+          <h4 class="footer-title">Partners</h4>
+          <li>
+            <a href="" class="terms-links">yatra.com</a>
+          </li>
+          <li>
+            <a href="" class="terms-links">goibobo.com</a>
+          </li>
+          <li>
+            <a href="" class="terms-links">association.in</a>
+          </li>
+        </div>
+      </div>
+    </footer>
+
     <div class="top-btn" id="top">
       <i class="fas fa-arrow-up"></i>
     </div>

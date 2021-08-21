@@ -1,5 +1,5 @@
 .know-more {
-  padding: 2rem 1.5rem;
+  margin: 2rem 1.5rem;
   & .konw-conatiner {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -48,6 +48,7 @@
               margin-right: 2rem;
               border-radius: 50%;
               font-weight: 800;
+              color: $second;
             }
             & .number.active{
               background: $second;

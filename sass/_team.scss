@@ -1,0 +1,64 @@
+.team {
+  margin: 3rem 1.5rem;
+  & .team-title {
+    margin: 1.3rem 0;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  & .team-para {
+    width: 60%;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+  & .team-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 10px;
+    & .single {
+      width: 15rem;
+      margin-top: 1.5rem;
+      max-width: 100%;
+      margin: auto;
+      & .singl-img {
+        margin: auto;
+        cursor: pointer;
+        overflow: hidden;
+
+        & img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+          @include transition;
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
+      }
+      & .team-name {
+        text-align: center;
+        color: gray;
+        @include fontweight;
+        font-size: 1rem;
+      }
+      & .team-post {
+        text-align: center;
+        font-size: 1rem;
+      }
+      @include mobile2 {
+        width: 200px;
+        
+      }
+    }
+    @include mobile4 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include mobile3 {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  @include mobile2{
+    margin: 3rem 0;
+  }
+}

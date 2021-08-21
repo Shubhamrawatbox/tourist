@@ -5,6 +5,9 @@
 @import "./know";
 @import "./work";
 @import "./topbtn";
+@import "./team";
+@import "./about";
+@import "./footer";
 
 @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap");
@@ -17,6 +20,21 @@
 body {
   background: $first;
   font-family: "Noto Sans JP", sans-serif;
+}
+body.dark-theme{
+  background: #000;
+  color: #fff;
+  & .main-header{
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("../images/bg.jpg");
+
+  }
+  & .service-title{
+    color: #000 !important;
+  }
+  & .product-list{
+    color: #000 !important;
+  }
 }
 
 a {
@@ -71,7 +89,7 @@ li {
       display: flex;
       justify-content: flex-end;
       &__menu {
-        margin-left: 2rem;
+        margin-left: 1.5rem;
         position: relative;
         & .list-item {
           color: $first;
@@ -104,6 +122,9 @@ li {
         }
         @include mobile2 {
           margin-top: 1.2rem;
+        }
+        @include mobile{
+          margin-left: 1rem;
         }
       }
       @include mobile {
